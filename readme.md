@@ -16,5 +16,8 @@ You can use either:
 - ```npm start``` or,
 - ```node app.js```.
 
+## Testing
+Import the postman collection inside ```Example``` folder to see the API sample request.
+
 ### Copyright © 2021 Cornelius Tantius
 All rights Reserved
