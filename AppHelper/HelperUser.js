@@ -13,6 +13,12 @@ HelperUser.AddUser = async function(client, body){
     
     const db = client.db("menotedb");
     const userCollection = db.collection("user");
+    let query = {"$or": [{"username":user.getUsername()}, {"userEmail":user.getUserEmail()}]}
+    let arr = (await userCollection.find(query).toArray());
+    if(arr.length >= 1){
+        retVal.setMessage("username / email already exists");
+        return retVal
+    }
     await userCollection.insertOne(
         user.getJson()
     ).then(result => {
