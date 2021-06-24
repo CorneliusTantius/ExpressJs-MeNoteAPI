@@ -2,12 +2,14 @@ const ModelUser = {}
 
 ModelUser.User = class {
     constructor(){
+        this._id = null;
         this.username = "";
         this.userEmail = "";
         this.userPassword = "";
     }
 
     loadJson(data){
+        this._id = data['_id'];
         this.username = data['username'];
         this.userEmail = data['userEmail'];
         this.userPassword = data['userPassword'];
@@ -24,6 +26,7 @@ ModelUser.User = class {
         };
     }
     
+    getId(){return this.id;}
     getUsername(){return this.username;}
     getUserEmail(){return this.userEmail;}
     getUserPassword(){return this.userPassword;}

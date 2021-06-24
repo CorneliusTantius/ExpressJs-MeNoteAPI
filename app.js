@@ -15,7 +15,6 @@ app.use(express.json());
 app.listen(PORT, function(){
     client.connect();
     console.log("> Database Client Connected!");
-
     console.log("> ME-Note Backend API");
     console.log(`> Listening on http://localhost:${PORT}`);
 });
