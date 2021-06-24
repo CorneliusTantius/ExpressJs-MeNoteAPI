@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "922ca9cb-605d-48f2-891a-2ab26247f0a2",
+		"name": "ME Note",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"tantius\",\r\n    \"userEmail\":\"corneliustantius@email.com\",\r\n    \"userPassword\":\"cornel123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
