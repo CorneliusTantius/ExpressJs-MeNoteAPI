@@ -11,4 +11,13 @@ module.exports = function(app, client){
         response.send(retVal);
     });
 
+    app.get("/user/get/username", async function(request, response){
+        var retVal = await HelperUser.GetUserByUsername(client, request.body);
+        response.send(retVal);
+    }); 
+
+    app.post("/user/update/password", async function(request, response){
+        var retVal = await HelperUser.UpdatePasswordByUsername(client, request.body);
+        response.send(retVal);
+    });
 }

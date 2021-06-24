@@ -25,6 +25,14 @@ ModelUser.User = class {
             "userPassword": this.userPassword
         };
     }
+    getJsonWithId(){
+        return {
+            "_id":this._id,
+            "username": this.username,
+            "userEmail": this.userEmail,
+            "userPassword": this.userPassword
+        };
+    }
     
     getId(){return this.id;}
     getUsername(){return this.username;}
