@@ -3,21 +3,21 @@ module.exports = function(app, client){
 
     app.post("/user/add", async function(request, response){
         var retVal = await HelperUser.AddUser(client, request.body);
-        response.send(retVal);
+        response.json(retVal);
     });
 
     app.get("/user/get", async function(request, response){
         var retVal = await HelperUser.GetAllUser(client);
-        response.send(retVal);
+        response.json(retVal);
     });
 
     app.get("/user/get/username", async function(request, response){
         var retVal = await HelperUser.GetUserByUsername(client, request.body);
-        response.send(retVal);
+        response.json(retVal);
     }); 
 
     app.post("/user/update/password", async function(request, response){
         var retVal = await HelperUser.UpdatePasswordByUsername(client, request.body);
-        response.send(retVal);
+        response.json(retVal);
     });
 }
